@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: VS Code中文社区
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: VSCodeCC
+language: zh-CN
 timezone: ''
 
 # URL
@@ -45,12 +45,17 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -93,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
