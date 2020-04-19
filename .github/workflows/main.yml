@@ -19,6 +19,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        submodules: true
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
@@ -27,5 +29,5 @@ jobs:
         BASE_BRANCH: source
         BRANCH: master
         FOLDER: public
-        BUILD_SCRIPT: git submodule update && yarn && yarn build
+        BUILD_SCRIPT: yarn && yarn build
         
