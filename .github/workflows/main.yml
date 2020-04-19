@@ -7,8 +7,6 @@ name: CI
 on:
   push:
     branches: [ source ]
-  pull_request:
-    branches: [ source ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,9 +23,13 @@ jobs:
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACCESS_TOKEN: token
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: source
         BRANCH: master
         FOLDER: public
         BUILD_SCRIPT: yarn && yarn build
+    - name: Check Build
+      run: |
+        sudo -i
+        sudo chown -R $USER ./public
         
