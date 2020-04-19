@@ -27,5 +27,5 @@ jobs:
         BASE_BRANCH: source
         BRANCH: master
         FOLDER: public
-        BUILD_SCRIPT: yarn && yarn build
+        BUILD_SCRIPT: git submodule update && yarn && yarn build
         
