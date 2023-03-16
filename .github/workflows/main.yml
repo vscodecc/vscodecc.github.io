@@ -2,8 +2,7 @@
 
 name: Deploy to GitHub Pages
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Controls when the action will run.
 on:
   push:
     branches: [ source ]
@@ -22,12 +21,13 @@ jobs:
       with:
         submodules: true
 
-    - name: Build and Deploy
+    - name: Install and Build
+      run: |
+        yarn
+        yarn build
+
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: source
-        BRANCH: master
-        FOLDER: public
-        BUILD_SCRIPT: yarn && yarn build
-        
+      with:
+        folder: public
+        branch: master
