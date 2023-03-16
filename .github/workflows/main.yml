@@ -23,7 +23,7 @@ jobs:
         submodules: true
 
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@4
+      uses: JamesIves/github-pages-deploy-action@v4
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: source
