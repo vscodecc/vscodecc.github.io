@@ -99,6 +99,33 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
+theme_config:
+  # The configuration of the second button in the home banner,
+  # including the display name of the button, the font awesome icon, and the hyperlink to the button.
+  # 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
+  indexbtn:
+    enable: true
+    name: Github
+    icon: fab fa-github-alt
+    url: https://github.com/vscodecc/vscodecc
+  # Whether to display fork me on github icon and link, default true, You can change it to your repo address
+  # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
+  githubLink:
+    enable: true
+    url: https://github.com/vscodecc/vscodecc.github.io
+    title: Fork Me
+  # The configurations of the second line of home banner
+  # icon/button will not show up if you leave the corresponding socialLink empty
+  # 首页 banner 中的第二行个人信息配置，留空即不启用
+  socialLink:
+    github:  https://github.com/vscodecc
+    email: # 1181062873@qq.com
+    facebook: # https://www.facebook.com/xxx
+    twitter: # https://twitter.com/xxx
+    qq: # 1181062873
+    weibo: # https://weibo.com/xxx
+    zhihu: # https://www.zhihu.com/xxx
+    rss: true # true、false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
